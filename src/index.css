@@ -8,8 +8,34 @@ body {
   background-color: turquoise;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .main-title {
   background-color: lightcyan;
   text-align: center;
   font-size: 4rem;
+}
+
+.selector-genre {
+  margin-bottom: 1rem;
+}
+
+.container-list {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.list {
+  margin-bottom: 1rem;
+}
+
+.list-link {
+  color: blue;
+  font-size: 2rem;
 }
