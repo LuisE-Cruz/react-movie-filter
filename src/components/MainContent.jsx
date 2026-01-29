@@ -23,7 +23,7 @@ function MainContent() {
 
             setListFilm(nuovaListaFilm);
         }
-    }, [genere]);
+    }, [genre]);
 
     return (
         <>
@@ -34,7 +34,7 @@ function MainContent() {
                     name="genre"
                     id="film-genre"
                     value={listFilm}
-                    onChange={e => { setListFilm(e.target.value) }}
+                    onChange={e => { setGenre(e.target.value) }}
 
                 >
 
