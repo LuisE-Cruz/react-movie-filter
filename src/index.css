@@ -7,3 +7,9 @@
 body {
   background-color: turquoise;
 }
+
+.main-title {
+  background-color: lightcyan;
+  text-align: center;
+  font-size: 4rem;
+}
