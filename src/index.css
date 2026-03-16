@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+  text-align: center;
+  color: blue;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
