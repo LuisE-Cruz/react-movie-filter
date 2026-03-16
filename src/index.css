@@ -4,9 +4,19 @@
   box-sizing: border-box;
 }
 
+/* Generics */
+
 body {
   background-color: lightblue;
   font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .title {
@@ -14,4 +24,18 @@ body {
   color: blue;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.container-list {
+  text-align: center;
+}
+
+.list-film {
+  margin-bottom: 1rem;
+}
+
+.list-link {
+  color: rgb(0, 110, 255);
+  font-size: 1.5rem;
 }
