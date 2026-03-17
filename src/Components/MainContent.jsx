@@ -1,21 +1,39 @@
-import { useState } from "react"
-import films from "../Data/films"
+import { useEffect, useState } from "react"
 
+export default function MainContent({ films }) {
 
-export default function MainContent() {
+    const filmGenre = films.map((singleFilm) => singleFilm.genre)
+    const genreSet = [...new Set(filmGenre)]
 
-    const [filmList, setFilmList] = useState(films)
+    const [genre, setGenre] = useState('')
+
+    const [filteredFilms, setFilteredFilms] = useState([])
+
+    useEffect(() => {
+        const filteredFilms = films.filter(filteredFilms => filteredFilms.genre.includes(genre))
+        setFilteredFilms(filteredFilms)
+    }, [genre])
 
 
     return (
         <>
             <div className="container-list">
+                <select className="genre-selector" name="Genre" id="film-genre" value={genre} onChange={e => { setGenre(e.target.value) }}>
+                    <option value=""> -- Select a genre -- </option>
+                    {
+                        genreSet.map((singleGenre, index) => (
+                            <option key={index} value={singleGenre}>{singleGenre}</option>
+                        ))
+                    }
+
+                </select>
+
                 <ul>
-                    {filmList.map((film, index) => (
+                    {filteredFilms.map((singleFilm, index) => (
                         <li className="list-film" key={index}>
                             <a className="list-link" href="#">
-                                {film.title} <br />
-                                {film.genre}
+                                {singleFilm.title} <br />
+                                {singleFilm.genre}
                             </a>
                         </li>
                     ))}
